@@ -10,8 +10,10 @@ const config: Config = {
   theme: {
     screens: {
       sm: "375px",
+    
       md: "768px",
       lg: "1200px",
+
     },
     extend: {
       container: {
@@ -21,6 +23,20 @@ const config: Config = {
           lg: "80px",
         },
       },
+      backgroundImage: {
+        'hero-gradient': 'linear-gradient(180deg, #E1F1FF 0%, #FFFFFF 100%)',
+        'arrow-pattern': 'url(/path/to/arrow.png)', // Path to the image
+      },
+      animation: {
+        shimmer: 'shimmer 0.5s infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+      },
+    
     },
   },
   plugins: [],
